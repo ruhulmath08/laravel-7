@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("welcome");
 });
+
+Route::get('/users', 'Users@index');
+
+//pass value from route
+Route::view('/name', 'simple', ['name' => 'ruhul']);
+
